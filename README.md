@@ -8,7 +8,7 @@ The easiest way to use AO Connect from Python! As simple as it gets.
 git clone https://github.com/imortaltatsu/aopy-connect.git
 pip install aopy-connect/
 git clone https://github.com/imortaltatsu/pyaoconnect.git
-pip install pyaoconnect.git
+pip install pyaoconnect/
 ```
 
 ## Super Simple Usage
