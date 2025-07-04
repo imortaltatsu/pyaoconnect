@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=42", "wheel"]
+requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -25,7 +25,8 @@ classifiers = [
 ]
 requires-python = ">=3.7"
 dependencies = [
-    "aopy_connect @ git+https://github.com/imortaltatsu/aopy-connect.git"
+    "requests>=2.25.0",
+    "websockets>=10.0",
 ]
 
 [project.optional-dependencies]
@@ -38,6 +39,9 @@ dev = [
 Homepage = "https://github.com/imortaltatsu/pyaoconnect"
 Repository = "https://github.com/imortaltatsu/pyaoconnect"
 Issues = "https://github.com/imortaltatsu/pyaoconnect/issues"
+
+[project.scripts]
+pyaoconnect = "pyaoconnect.simple:quick_start"
 
 [tool.setuptools.packages.find]
 where = ["."]

@@ -5,13 +5,22 @@ Core AOConnect functionality - streamlined interface, delegates to aopy_connect
 import os
 import json
 from typing import Dict, List, Optional, Any
-from aopy_connect import AOConnectWrapper
+
+try:
+    from aopy_connect import AOConnectWrapper
+    HAS_AOPY_CONNECT = True
+except ImportError:
+    HAS_AOPY_CONNECT = False
 
 class AOConnect:
     """
     Streamlined Python wrapper for AO Connect, using aopy_connect.AOConnectWrapper
     """
     def __init__(self, wallet_path: Optional[str] = None):
+        if not HAS_AOPY_CONNECT:
+            raise ImportError(
+                "aopy_connect is not installed. Please run 'pip install -e ./aopy-connect' first."
+            )
         self._wrapper = AOConnectWrapper(wallet_path)
 
     def create_wallet(self) -> Dict[str, Any]:

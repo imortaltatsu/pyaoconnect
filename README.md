@@ -4,12 +4,37 @@ The easiest way to use AO Connect from Python! As simple as it gets.
 
 ## Installation
 
+### Prerequisites
+- Python 3.7+
+- Node.js (download from https://nodejs.org/)
+- Git
+
+### Method 1: Direct Installation (Recommended)
 ```bash
-git clone https://github.com/imortaltatsu/aopy-connect.git
-pip install aopy-connect/
+# Clone the repository
 git clone https://github.com/imortaltatsu/pyaoconnect.git
-pip install pyaoconnect/
+cd pyaoconnect
+
+# Install using setup.py (this will handle all dependencies automatically)
+python setup.py install
+
+# Or for development
+python setup.py develop
 ```
+
+### Method 2: pip install git+https
+```bash
+# Install directly from GitHub
+pip install git+https://github.com/imortaltatsu/pyaoconnect.git
+
+# After installation, run the post-install script to set up dependencies
+python -c "import post_install; post_install.main()"
+```
+
+The setup script will automatically:
+- ✅ Install Node.js dependencies (@permaweb/aoconnect)
+- ✅ Clone and install aopy-connect dependency
+- ✅ Set up everything you need
 
 ## Super Simple Usage
 
