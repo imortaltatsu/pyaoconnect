@@ -9,7 +9,7 @@ description = "Super Simple AO Connect - Child-friendly Python interface"
 readme = "README.md"
 license = {text = "MIT"}
 authors = [
-    {name = "Aditya Berry", email = "aditya@example.com"}
+    {name = "Aditya Berry", email = "adityaberry1234@gmail.com"}
 ]
 classifiers = [
     "Development Status :: 4 - Beta",
